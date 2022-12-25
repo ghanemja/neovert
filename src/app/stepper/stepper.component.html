@@ -1,11 +1,41 @@
 <igx-stepper #stepper [linear]="true">
 
-  <igx-step #step1 [isValid]="!!selectedCard" [completed]="!!selectedCard">
-      <span igxStepTitle>Card Type</span>
+  <igx-step #step1 [isValid]="!!selectedProject" [completed]="!!selectedProject">
+      <span igxStepTitle>Project Selection</span>
       <div igxStepContent [tabIndex]="-1">
-          <h2 class="sample-step-title">Choose your business credit card</h2>
-          <div class="card-wrapper">
-              <igx-card *ngFor="let card of cards" (click)="selectCard(card)"
+          <!-- <h2 class="sample-step-title">Choose your project</h2> -->
+          <div class="col flex-direction-col flex justify-content-center">
+            <div class="row flex-direction-row justify-content-center pb-5">
+                <div class="col-6 d-flex justify-content-center">
+                    <button mat-raised-button color="blue">Use Existing</button>
+                </div>
+                <div class="col-6 d-flex justify-content-center">
+                    <button mat-raised-button color="blue">Create New</button>
+                </div>
+            </div>
+            <div class="row">
+                <mat-accordion>
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                                     (closed)="panelOpenState = false">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      Select a project to manage
+                    </mat-panel-title>
+                    <!-- <mat-panel-description>
+                      Currently I am {{panelOpenState ? 'open' : 'closed'}}
+                    </mat-panel-description> -->
+                  </mat-expansion-panel-header>
+                  <ag-grid-angular
+                  style="width: 1000px; height: 300px"
+                  class="ag-theme-alpine"
+                  [rowData]="rowData"
+                  onRowSelected="onRowSelect"
+                  [columnDefs]="columnDefs">
+                </ag-grid-angular>
+                </mat-expansion-panel>
+                </mat-accordion>
+            </div>
+              <!-- <igx-card *ngFor="let card of cards" (click)="selectCard(card)"
                   [ngClass]="{'selected-card': selectedCard === card}" [tabIndex]="0"
                   (keydown)="handleKeyDown($event, card)">
                   <igx-badge *ngIf="selectedCard === card" value="Your current choice"></igx-badge>
@@ -19,7 +49,7 @@
                       <p>{{card.type}}</p>
                       <p>{{card.description}}</p>
                   </igx-card-content>
-              </igx-card>
+              </igx-card> -->
           </div>
       </div>
   </igx-step>

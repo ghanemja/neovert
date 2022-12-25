@@ -1,6 +1,8 @@
 import { ChangeDetectorRef, Component, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { IgxStepperComponent } from 'igniteui-angular';
+import { ColDef } from 'ag-grid-community';
+import { ResolveStart } from '@angular/router';
 
 @Component({
     selector: 'app-stepper',
@@ -10,6 +12,23 @@ import { IgxStepperComponent } from 'igniteui-angular';
 export class StepperComponent {
     @ViewChild('stepper', { static: true })
     public stepper: IgxStepperComponent;
+
+    selectedProject = false;
+    panelOpenState = false;
+
+    columnDefs: ColDef[] = [
+        { field: 'Title', filter: 'agTextColumnFilter' },
+        { field: 'Description', filter: 'agTextColumnFilter' },
+        { field: 'Owner', filter: 'agTextColumnFilter' },
+        { field: 'My Roles', filter: 'agTextColumnFilter' },
+        { field: 'Collaborators', filter: 'agTextColumnFilter' }
+
+    ];
+
+    rowData = [
+        { Title: 'Lemonade Stand', Description: 'Local fresh lemonade', Owner: 'Janelle', 'My Roles': 'View Only', Collaborators: 'JG' },
+        { Title: 'J&N Detailing', Description: 'Mobile car detailing service', Owner: 'Joseph', 'My Roles': 'Administrator', Collaborators: 'PM' },
+    ];
 
     public today: Date = new Date();
 
@@ -98,5 +117,12 @@ export class StepperComponent {
         if (evt.key.toLowerCase() === ' ' || evt.key.toLowerCase() === 'spacebar' || evt.key.toLowerCase() === 'space') {
             this.selectCard(card);
         }
+    }
+
+    onRowSelect(event: any) {
+        this.selectedProject = true;
+
+        console.log(this.selectedProject)
+        console.log(event.node.rowData)
     }
 }

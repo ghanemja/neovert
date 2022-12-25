@@ -30,6 +30,9 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { fakeBackendProvider } from './_helpers';
+import { AgGridModule } from 'ag-grid-angular';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -61,10 +64,12 @@ import { MatButtonModule } from '@angular/material/button';
     IgxAccordionModule,
 	  IgxSwitchModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    AgGridModule,
+    MatExpansionModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: [],
+  providers: [ fakeBackendProvider ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

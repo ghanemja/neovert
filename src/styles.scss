@@ -5,6 +5,8 @@
 // $secondary: #ce5712 !default;
 // $app-palette: palette($primary, $secondary);
 
+@import 'ag-grid-community/styles/ag-grid.css';
+@import 'ag-grid-community/styles/ag-theme-alpine.css';
 /* autoprefixer grid: on */
 
 // @font-face {
