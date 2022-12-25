@@ -6,8 +6,8 @@
     z-index: 999;
     position: absolute;
     width: 100vw;
-    margin-left: 100px;
-    padding: 1rem;
+    margin-left: 6rem !important;
+    padding-left: 0px !important;
     flex-direction: column;
   }
 
@@ -37,8 +37,8 @@
 
 .words {
     padding: 3rem;
-    margin-left: 150px;
-    font-size: 56px;
+    // margin-left: 100px;
+    font-size: 48px;
 }
 
 .button {
@@ -46,19 +46,20 @@
     scale: 150%;
     padding: 1rem;
     margin-top: 5rem;
-    margin-left: 100px !important
+    margin-left: 0px !important
 }
 
   .swatch {
     display: block;
     text-align: center;
     position: relative;
-    margin: 100px;
-    margin-right: 400px !important;
+    margin-top: 3rem !important;
+    // margin: 100px;
+    margin-right: 200px !important;
   }
   .swatch div {
-    width: 300px;
-    height: 610px;
+    width: 200px;
+    height: 510px;
     position: absolute;
     top: 0px;
     border-radius: 5px;
@@ -186,29 +187,7 @@
   z-index: 999
 }
 
-.floatthings:after {
-  transform: translatey(0px);
-  animation: float2 5s ease-in-out infinite;
-  content: ".";
-  font-weight: bold;
-  // -webkit-text-stroke: 0.5px $color-green;
-  -webkit-text-fill-color: white;
-  // border: 1px solid $color-green;
-//   text-shadow: 22px 22px $color-blue;
-  text-align: left;
-  font-size: 55px;
-  width: 55px;
-  height: 11px;
-  line-height: 30px;
-  border-radius: 11px;
-  background-color: white;
-  position: absolute;
-  display: block;
-  bottom: -30px;
-  left: 0;
-//   box-shadow: 22px 22px $color-blue;
-  z-index: -2;
-}
+
 
 @keyframes float {
   0% {
