@@ -22,8 +22,11 @@ import {
 	IgxCheckboxModule,
 	IgxSelectModule,
 	IgxIconModule,
-	IgxBadgeModule
+	IgxBadgeModule,
+  IgxAccordionModule,
+	IgxSwitchModule
  } from "igniteui-angular";
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,8 @@ import {
     AboutComponent,
     NavbarComponent,
     ConsoleComponent,
-    StepperComponent
+    StepperComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +53,9 @@ import {
     IgxSelectModule,
     IgxIconModule,
     IgxBadgeModule,
-    IgxGridModule
+    IgxGridModule,
+    IgxAccordionModule,
+	  IgxSwitchModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],

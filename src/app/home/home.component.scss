@@ -1,0 +1,261 @@
+  body {
+    background: #663399;
+  }
+
+  .title {
+    z-index: 999;
+    position: absolute;
+    width: 100vw;
+    margin-left: 100px;
+    padding: 1rem;
+    flex-direction: column;
+  }
+
+  .thought {
+    display:flex;
+    background-color:#fff;
+    padding:20px;
+    border-radius:30px;
+    min-width:40px;
+    max-width:220px;
+    min-height:40px;
+    margin:20px;
+    position:relative;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+  }
+  .thought:before,
+  .thought:after {
+    content:"";
+    background-color:#fff;
+    border-radius:50%;
+    display:block;
+    position:absolute;
+    z-index:-1;
+  }
+
+.words {
+    padding: 3rem;
+    margin-left: 150px;
+    font-size: 56px;
+}
+
+.button {
+    z-index: 999;
+    scale: 150%;
+    padding: 1rem;
+    margin-top: 5rem;
+    margin-left: 100px !important
+}
+
+  .swatch {
+    display: block;
+    text-align: center;
+    position: relative;
+    margin: 100px;
+    margin-right: 400px !important;
+  }
+  .swatch div {
+    width: 300px;
+    height: 610px;
+    position: absolute;
+    top: 0px;
+    border-radius: 5px;
+    // border-top: solid 2px rgba(0, 0, 0, 0.2);
+    // border-left: solid 3px rgba(255, 255, 255, 0.2);
+    // border-bottom: solid 3px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    box-sizing: border-box;
+    transform-origin: center 90%;
+    display: inline-block;
+    backface-visibility: hidden;
+    margin-right: 60px;
+    transform: rotate(0deg);
+  }
+  .swatch div:before {
+    width: 16px;
+    height: 16px;
+    content: "";
+    background-color: #FFFFFF;
+    display: inline-block;
+    border-radius: 8px;
+    bottom: 10px;
+    position: absolute;
+    margin-left: -8px;
+  }
+  .swatch div:nth-child(1) {
+    background-color: #815A8F;
+    animation: swatch-purple-motion 5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+  .swatch div:nth-child(2) {
+    background-color: #126BC5;
+    animation: swatch-blue-motion 5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+  .swatch div:nth-child(3) {
+    background-color: #9ED763;
+    animation: swatch-green-motion 5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+  .swatch div:nth-child(4) {
+    background-color: #FBD400;
+    animation: swatch-yellow-motion 5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+  .swatch div:nth-child(5) {
+    background-color: #FF9000;
+    animation: swatch-orange-motion 5s cubic-bezier(0.4, 0, 0.2, 1) forwards ;
+  }
+  .swatch div:nth-child(6) {
+    background-color: #F73F52;
+    animation: swatch-red-motion 5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+  @keyframes swatch-purple-motion {
+    0% {
+      transform: rotate(0deg);
+    }
+    30%,
+    100% {
+      transform: rotate(-65deg);
+    }
+    // 90%,
+    // 10% {
+    //   transform: rotate(0deg);
+    // }
+  }
+  @keyframes swatch-blue-motion {
+    0% {
+      transform: rotate(0deg);
+    }
+    30%,
+    100% {
+      transform: rotate(-40deg);
+    }
+  }
+  @keyframes swatch-green-motion {
+    0% {
+      transform: rotate(0deg);
+    }
+    30%,
+    100% {
+      transform: rotate(-15deg);
+    }
+  }
+  @keyframes swatch-yellow-motion {
+    0% {
+      transform: rotate(0deg);
+    }
+    30%,
+    100% {
+      transform: rotate(15deg);
+    }
+  }
+  @keyframes swatch-orange-motion {
+    0% {
+      transform: rotate(0deg);
+    }
+    30%,
+    100% {
+      transform: rotate(40deg);
+    }
+  }
+  @keyframes swatch-red-motion {
+    0% {
+      transform: rotate(0deg);
+    }
+    30%,
+    100% {
+      transform: rotate(65deg);
+    }
+  }
+
+.floatthings {
+  transform: translatey(0px);
+  animation: float 5s ease-in-out infinite;
+  mix-blend-mode: multiply;
+  text-align: center;
+//   text-transform: uppercase;
+//   font-weight: bold;
+//   letter-spacing: 3px;
+//   font-size: 15px;
+  color: black;
+  background-color: rgb(255, 255, 255, 0.8);
+  padding: 50px;
+  border-radius: 11px;
+  position: relative;
+//   box-shadow: 20px 20px $color-blue;
+  // border: 1px solid $color-green;
+  z-index: 999
+}
+
+.floatthings:after {
+  transform: translatey(0px);
+  animation: float2 5s ease-in-out infinite;
+  content: ".";
+  font-weight: bold;
+  // -webkit-text-stroke: 0.5px $color-green;
+  -webkit-text-fill-color: white;
+  // border: 1px solid $color-green;
+//   text-shadow: 22px 22px $color-blue;
+  text-align: left;
+  font-size: 55px;
+  width: 55px;
+  height: 11px;
+  line-height: 30px;
+  border-radius: 11px;
+  background-color: white;
+  position: absolute;
+  display: block;
+  bottom: -30px;
+  left: 0;
+//   box-shadow: 22px 22px $color-blue;
+  z-index: -2;
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+@keyframes float2 {
+  0% {
+    line-height: 30px;
+    transform: translatey(0px);
+  }
+  55% {
+    transform: translatey(-20px);
+  }
+  60% {
+    line-height: 10px;
+  }
+  100% {
+    line-height: 30px;
+    transform: translatey(0px);
+  }
+}
+
+.typewriter {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid #126BC5; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .1em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(30, end),
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+  }
