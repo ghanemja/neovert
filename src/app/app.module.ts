@@ -27,6 +27,9 @@ import {
 	IgxSwitchModule
  } from "igniteui-angular";
 import { HomeComponent } from './home/home.component';
+import { ContactComponent } from './contact/contact.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,8 @@ import { HomeComponent } from './home/home.component';
     NavbarComponent,
     ConsoleComponent,
     StepperComponent,
-    HomeComponent
+    HomeComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +59,9 @@ import { HomeComponent } from './home/home.component';
     IgxBadgeModule,
     IgxGridModule,
     IgxAccordionModule,
-	  IgxSwitchModule
+	  IgxSwitchModule,
+    MatCardModule,
+    MatButtonModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],

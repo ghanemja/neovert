@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute
+ ) {}
+
+  navigate() : void {
+    this.router.navigate(['/ad-console'], { relativeTo: this.route });
+  }
 
 }
