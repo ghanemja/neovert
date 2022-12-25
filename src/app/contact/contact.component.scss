@@ -52,6 +52,16 @@ div {
     // box-shadow: inset 0px 0px 5px white;
 }
 
+
+.white {
+    background-color: white !important;
+}
+
+.half {
+    width: 50px
+}
+
+
 .label {
     color: lightblue;
     z-index: 999;
@@ -133,6 +143,10 @@ mat-card {
     color: #126BC5;
     margin: 0 !important;
     padding: 0 !important
+}
+
+.tf {
+    width: 125px;
 }
 
 textarea {
@@ -252,7 +266,7 @@ textarea {
 }
 
 .flipped {
-    transform: scale(-1, 1);
+    // transform: scale(-1, 1);
 }
 
 #form_button {
